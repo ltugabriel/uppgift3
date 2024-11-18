@@ -16,27 +16,32 @@
       action="https://swplayground.ltu.se/resources/parse_form.php"
       method="POST"
     >
-      <!-- Fält för namn -->
-      <label for="namn">Ditt namn:</label>
-      <input type="text" id="namn" name="namn" required />
+      <div>
+        <!-- Fält för namn -->
+        <label for="namn">Ditt namn:</label>
+        <input type="text" id="namn" name="namn" required />
+      </div>
       <br /><br />
 
-      <!-- Fält för telefon -->
-      <label for="telefon">Telefon:</label>
-      <input type="text" id="telefon" name="telefon" required />
+      <div>
+        <!-- Fält för telefon -->
+        <label for="telefon">Telefon:</label>
+        <input type="text" id="telefon" name="telefon" required />
+      </div>
       <br /><br />
 
-      <!-- Dropdown för prioritet -->
-      <label for="prioritet">Prioritet:</label>
-      <select id="prioritet" name="prioritet" required>
-        <option value="1">Låg</option>
-        <option value="2">Normal</option>
-        <option value="3">Hög</option>
-      </select>
-      <br /><br />
+      <div>
+        <!-- Dropdown för prioritet -->
+        <label for="prioritet">Prioritet:</label>
+        <select id="prioritet" name="prioritet" required>
+          <option value="1">Låg</option>
+          <option value="2">Normal</option>
+          <option value="3">Hög</option>
+        </select>
+        <br /><br />
+      </div>
 
       <!-- Radioknappar för ort -->
-      <fieldset>
         <legend>Tilldela till ort:</legend>
         <input type="radio" id="gbg" name="ort" value="gbg" required />
         <label for="gbg">Göteborg</label><br />
@@ -46,8 +51,7 @@
         <label for="ume">Umeå</label><br />
         <input type="radio" id="lule" name="ort" value="lule" />
         <label for="lule">Luleå</label>
-      </fieldset>
-      <br />
+        <br /><br />
 
       <!-- Dropdown för kategori -->
       <label for="kategori">Kategori:</label>
@@ -59,20 +63,24 @@
       </select>
       <br /><br />
 
-      <!-- Textfält för rubrik -->
-      <label for="rubrik">Rubrik:</label>
-      <input type="text" id="rubrik" name="rubrik" required />
+      <div>
+        <!-- Textfält för rubrik -->
+        <label for="rubrik">Rubrik:</label>
+        <input type="text" id="rubrik" name="rubrik" required />
+      </div>
       <br /><br />
 
-      <!-- Textområde för beskrivning -->
-      <label for="beskrivning">Beskrivning:</label><br />
-      <textarea
-        id="beskrivning"
-        name="beskrivning"
-        rows="5"
-        cols="40"
-        required
+      <div>
+        <!-- Textområde för beskrivning -->
+        <label for="beskrivning">Beskrivning:</label><br />
+        <textarea
+          id="beskrivning"
+          name="beskrivning"
+          rows="5"
+          cols="40"
+          required
         ></textarea>
+      </div>
       <br /><br />
 
       <!-- Submit- och resetknappar -->
