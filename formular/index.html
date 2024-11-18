@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supportformulär</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Skapar rubrik för formuläret -->
+    <h1>Supportformulär</h1>
+    <p>Här kan du skicka ett ärende till vår supportavdelning.</p>
+
+    <!-- Formuläret med POST-metod och action -->
+    <form
+      action="https://swplayground.ltu.se/resources/parse_form.php"
+      method="POST"
+    >
+      <!-- Fält för namn -->
+      <label for="namn">Ditt namn:</label>
+      <input type="text" id="namn" name="namn" required />
+      <br /><br />
+
+      <!-- Fält för telefon -->
+      <label for="telefon">Telefon:</label>
+      <input type="text" id="telefon" name="telefon" required />
+      <br /><br />
+
+      <!-- Dropdown för prioritet -->
+      <label for="prioritet">Prioritet:</label>
+      <select id="prioritet" name="prioritet" required>
+        <option value="1">Låg</option>
+        <option value="2">Normal</option>
+        <option value="3">Hög</option>
+      </select>
+      <br /><br />
+
+      <!-- Radioknappar för ort -->
+      <fieldset>
+        <legend>Tilldela till ort:</legend>
+        <input type="radio" id="gbg" name="ort" value="gbg" required />
+        <label for="gbg">Göteborg</label><br />
+        <input type="radio" id="sthlm" name="ort" value="sthlm" />
+        <label for="sthlm">Stockholm</label><br />
+        <input type="radio" id="ume" name="ort" value="ume" />
+        <label for="ume">Umeå</label><br />
+        <input type="radio" id="lule" name="ort" value="lule" />
+        <label for="lule">Luleå</label>
+      </fieldset>
+      <br />
+
+      <!-- Dropdown för kategori -->
+      <label for="kategori">Kategori:</label>
+      <select id="kategori" name="kategori" required>
+        <option value="fakt">Fakturering</option>
+        <option value="net">Internet</option>
+        <option value="tel">Telefoni</option>
+        <option value="epost">E-post</option>
+      </select>
+      <br /><br />
+
+      <!-- Textfält för rubrik -->
+      <label for="rubrik">Rubrik:</label>
+      <input type="text" id="rubrik" name="rubrik" required />
+      <br /><br />
+
+      <!-- Textområde för beskrivning -->
+      <label for="beskrivning">Beskrivning:</label><br />
+      <textarea
+        id="beskrivning"
+        name="beskrivning"
+        rows="5"
+        cols="40"
+        required
+        ></textarea>
+      <br /><br />
+
+      <!-- Submit- och resetknappar -->
+      <button type="submit" name="skicka" value="Submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
