@@ -1,14 +1,9 @@
-/* Allmän stil för dokumentet */
 body {
   font-family: Candara, Verdana, sans-serif;
-  /* Sätter det generella teckensnittet till Candara eller Verdana för god läsbarhet */
-  margin: 20px;
-  /* Lägger till marginal runt dokumentet för luft och avstånd */
-  line-height: 1.6;
-  /* Ökar radavståndet för att förbättra läsbarheten */
+  padding: 10px;
+  line-height: 1.4;
 }
 
-/* Stil för rubriker */
 h1,
 h2,
 h3,
@@ -16,140 +11,117 @@ h4,
 h5,
 h6 {
   font-family: Arial, Helvetica, sans-serif;
-  /* Sätter rubrikernas teckensnitt till Arial eller Helvetica för en ren och tydlig stil */
-  font-weight: bold;
-  /* Gör rubrikerna fetstilta för att framhäva dem */
 }
 
 h1 {
-  font-size: 24px;
-  /* Anger teckenstorlek för huvudrubriken (H1) */
+  font-size: 30px;
   margin-bottom: 10px;
-  /* Lägger till avstånd under huvudrubriken för bättre layout */
+  font-weight: 600;
+  margin-top: 0px;
 }
 
 h2 {
-  font-size: 20px;
-  /* Anger teckenstorlek för rubriker av typen H2 */
+  font-size: 24px;
+  font-weight: 600;
   margin-top: 20px;
-  /* Lägger till avstånd ovanför H2-rubriker för att separera sektioner */
   margin-bottom: 10px;
-  /* Lägger till avstånd under H2-rubriker för läsbarhet */
 }
 
 h3 {
   font-size: 18px;
-  /* Anger teckenstorlek för rubriker av typen H3 */
-  margin-top: 15px;
-  /* Lägger till avstånd ovanför H3-rubriker */
+  margin-top: 20px;
 }
 
-/* Stil för punktlistor */
 .lista {
   list-style-type: none;
-  /* Tar bort standard punkttecken från listor */
   padding: 0;
-  /* Tar bort standardinre marginaler för listan */
+  margin: 0;
   font-size: 16px;
-  /* Anger teckenstorlek för listor */
 }
 
 .lista li {
   margin-bottom: 5px;
-  /* Lägger till lite avstånd mellan listobjekten */
+  font-weight: 400;
 }
 
-/* Stil för tabell 1 */
 .tabell1 {
   background-color: #ffcccc;
-  /* Sätter bakgrundsfärgen på tabell 1 till en ljusröd nyans */
   width: 50%;
-  /* Sätter bredden till 50% av sidans bredd */
-  border-collapse: collapse;
-  /* Tar bort mellanrum mellan celler */
   margin-top: 10px;
-  /* Lägger till avstånd ovanför tabellen */
   font-size: 16px;
-  /* Anger teckenstorlek för tabellen */
+  border: 1px solid black;
 }
 
-/* Stil för tabell 2 */
+.tabell1 td {
+  padding: 5px 10px;
+}
+
+.tabell1 th {
+  border: 1px solid black;
+}
+
 .tabell2 {
   background-color: #ffcc99;
-  /* Sätter bakgrundsfärgen på tabell 2 till en ljusorange nyans */
   width: 50%;
-  /* Sätter bredden till 50% av sidans bredd */
   border-collapse: collapse;
-  /* Tar bort mellanrum mellan celler */
   margin-top: 10px;
-  /* Lägger till avstånd ovanför tabellen */
   font-size: 16px;
-  /* Anger teckenstorlek för tabellen */
+  border: 1px solid black;
 }
 
-/* Stil för tabellrubriker */
+.tabell2 td,
+.tabell2 th {
+  padding: 5px 10px;
+}
+
+.tabell2 th {
+  border: 1px solid black;
+}
+
 .tabell1 caption,
 .tabell2 caption {
-  font-weight: bold;
-  /* Gör rubriken för varje tabell fetstilt */
-  margin-bottom: 5px;
-  /* Lägger till avstånd under tabellrubrikerna */
+  font-size: 18px;
+  font-weight: 600;
   text-align: left;
-  /* Justerar rubriker till vänster */
 }
 
-/* Stil för tabellceller */
-.tabell1 td,
-.tabell2 td {
-  padding: 5px 10px;
-  /* Lägger till inre marginaler i tabellceller för bättre läsbarhet */
-}
-
-/* Stil för tabell 2 rubriker */
 .tabell2 thead th {
   text-align: left;
-  /* Justerar tabellrubriker till vänster */
   font-weight: bold;
-  /* Gör tabellrubrikerna fetstilta */
 }
 
-/* Stil för fottext */
 .foot {
   font-style: italic;
-  /* Gör fottexten kursiv för att särskilja den från övrig text */
   text-align: center;
-  /* Centrerar fottexten */
   font-size: 14px;
-  /* Minskar teckenstorleken på fottexten */
   padding: 5px;
-  /* Lägger till lite inre marginal för fottexten */
 }
 
-/* Stil för källhänvisning */
 #source {
   color: #009900;
-  /* Sätter textfärgen på källhänvisningen till grön (#009900) */
   font-size: 14px;
-  /* Anger teckenstorlek för källhänvisningen */
-  margin-top: 20px;
-  /* Lägger till avstånd ovanför källhänvisningen */
 }
 
-/* Stil för länken i källhänvisningen */
 #source a {
   color: #009900;
-  /* Sätter länkfärgen till samma gröna färg som texten */
   text-decoration: none;
-  /* Tar bort understrykning från länken */
+}
+
+#source {
+  margin: 0;
+  padding: 0;
+}
+
+.source-container {
+  display: flex;
+  justify-content: end;
+  column-gap: 10px;
+  width: 100%;
+  padding-top: 10px;
 }
 
 #source a:hover {
   color: white;
-  /* Ändrar länktexten till vit när man hovrar */
   background-color: #009900;
-  /* Ändrar bakgrundsfärgen till grön när man hovrar */
-  padding: 2px 5px;
-  /* Lägger till inre marginal runt länken för bättre synlighet vid hovring */
   text-decoration: none;
-  /* Behåller länken utan understrykning vid hovring */
 }
